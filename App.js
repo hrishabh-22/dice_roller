@@ -1,10 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image source={require("./src/images/dice1.png")} />
+      <TouchableOpacity>
+        <Text style={styles.text}>Play</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -12,8 +15,20 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#FF3031",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 25
   },
+  text:{
+    marginTop: 70,
+    borderWidth: 2,
+    paddingHorizontal: 50,
+    paddingVertical: 10,
+    fontSize: 20,
+    fontWeight: "bold",
+    borderRadius: 10,
+    borderColor: "white",
+    color: "white",
+  }
 });
